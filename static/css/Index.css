@@ -1,33 +1,33 @@
 .ScrappyHeader {
-	color:white;
+	color:#61dafb;
 	font-size:50px;
-	margin-left: 2vh;
 	font-family: Tahoma, Geneva, sans-serif;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: 0;
 
 }
 .IntroSection{
 	height: 30vh;
-	background-color: #0A4958;
+	background-color:#2d2d2d ;
 }
 
 .SearchSection{
-	height:67vh;
-	background-color: #01B6AD;
+	height:40vh;
+	background-color: rgb(225,222,222);
 }
 
-.FooterSection{
-	height:3vh;
-	background-color: #000;
-	min-height: 20px;
-}
 
-.FooterSection p{
-	margin-top: 0;
+.IntroSection #DivHeaderId{
+	width:230px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 9vh;
+ }
+
+.IntroSection p{
 	color: white;
+	margin: 0;
 	font-family: Tahoma, Geneva, sans-serif;
-
+	padding-top: 5px; 
 }
 
 *::-webkit-input-placeholder {
@@ -43,12 +43,36 @@
    color: rgba(50,50,50,0.5);
 }
 
+.NavBar{
+	margin: 0;
+	background-color: rgb(30,30,30);
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.NavBar p{
+	display: inline;
+	color: rgb(230,230,230);
+	font-family: Tahoma, Geneva, sans-serif;
+	cursor: pointer;
+}
+
+.NavBar #NavSearchId{
+	padding-right: 40px;
+}
+
+.NavBar #NavAboutId{
+	padding-right: 40px;
+}
 
 .WebsiteLinkForm div{
     height: 50px; 
     width: 290px;
     display: flex;
-    padding-top: 27vh;
+    padding-top: 15vh;
     margin:0 auto;
 }
 
@@ -56,7 +80,7 @@
 	font-size:100%;
     width: 100%;
     height: 50px;
-    border: 1px;
+    border: 1px solid #61dafb;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;  
     color: black;
@@ -66,11 +90,10 @@
     width: 90px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 20;
-    border-color: white;
+    border-color: #61dafb;
     color: white;
-    background-color: #b75115;
-    height: 52px;
+    background-color: #006768;
+    height: 54px;
     position: relative;
 }
 
