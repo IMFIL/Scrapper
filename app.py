@@ -4,27 +4,28 @@ import urllib2
 import json
 import jinja2
 from bs4 import BeautifulSoup
-import math
+import requests as RQ
 
 app = Flask(__name__)
 
 @app.route('/', methods=["GET"])
 def index():
-	link = request.args.get('websiteLink')
-	if link == None:
-		return render_template('index.html')
+	return render_template('index.html')
 
-	else:
-		try:
-			page = urllib2.urlopen(link).read()
-		except ValueError:
-			return "for now, you only get a string, but will make a error page :)"
 
-		soup = BeautifulSoup(page,"html.parser")
-		soup.prettify()
-		print(soup)
-		print(type(soup))
-		return "done"
+
+@app.route('/search/<url>')
+def search():
+	link = url
+
+	headers = {'user-agent': 'Mozilla/5.0'}
+	result = RQ.get(link,headers=headers)
+	soup = BeautifulSoup(result.content,"html.parser")
+	soup.prettify()
+	print(soup)
+	print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------")		
+	return "done"
+
 
 		# return a template that is exactly like index.html but has the results displayed in the search section
 
